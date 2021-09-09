@@ -1,7 +1,7 @@
 ID	Tag	Raum	Vortragstyp	Sprache_Titel	Sprache_Folien	Sprache_Vortrag	Sprache_Moderation
-WS2_1	1	A	Workshop	FR	FR	FR	FR_DE
-WS2_2	1	A	Workshop	DE	DE	DE	FR_DE
-WS2_3	1	A	Workshop	DE	DE	FR_DE	FR_DE
+WS2_1	1	A	Workshop	FR	FR	FR	DE_FR
+WS2_2	1	A	Workshop	DE	DE	DE	DE_FR
+WS2_3	1	A	Workshop	DE	DE	DE_FR	DE_FR
 WS1_1	1	B1B2	Workshop	EN	EN	EN	DE
 WS1_2	1	B1B2	Workshop	EN	EN	EN	DE
 WS1_3	1	B1B2	Workshop	FR	FR	FR	DE
@@ -10,7 +10,7 @@ WS3_1	1	B3	Workshop	EN	EN	EN	EN
 A_1	1	A	Grusswort	NA	NA	DE	FR
 A_2	1	A	Grusswort	NA	NA	IT	DE
 A_3	1	A	Keynote	EN	EN	DE	DE
-AT3_1	1	A	Atelier	EN	EN	FR_DE	FR
+AT3_1	1	A	Atelier	EN	EN	DE_FR	FR
 AT3_2	1	A	Atelier	EN	EN	EN	DE
 AT3_3	1	A	Atelier	FR	DE	FR	FR
 AT3_4	1	A	Atelier	FR	FR	FR	FR
