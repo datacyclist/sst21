@@ -43,11 +43,11 @@ AT12_3	2	A	Atelier	EN	EN	EN	FR
 AT12_4	2	A	Atelier	EN	EN	EN	FR
 A_6	2	A	Keynote	EN	EN	EN	FR
 LT_1	2	A	Lightning_Talk	EN	EN	EN	EN
-LT_2	2	A	Lightning_Talk	EN	EN	EN	EN
-LT_3	2	A	Lightning_Talk	IT	IT	IT	EN
-LT_4	2	A	Lightning_Talk	EN	EN	EN	EN
-LT_5	2	A	Lightning_Talk	FR	FR	FR	FR
-LT_6	2	A	Lightning_Talk	DE	DE	DE	FR
+LT_3	2	A	Lightning_Talk	EN	EN	EN	EN
+LT_5	2	A	Lightning_Talk	IT	IT	IT	EN
+LT_6	2	A	Lightning_Talk	EN	EN	EN	EN
+LT_7	2	A	Lightning_Talk	FR	FR	FR	FR
+LT_8	2	A	Lightning_Talk	DE	DE	DE	FR
 AT8_1	2	B1B2	Atelier	DE_FR	DE_FR	DE_FR	FR
 AT8_2	2	B1B2	Atelier	FR	FR	FR	DE
 AT8_3	2	B1B2	Atelier	EN	IT	EN	DE
