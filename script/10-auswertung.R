@@ -19,15 +19,34 @@ dat <- read_tsv(file='../csv/sst21stats.csv',
 															 Sprache_Titel ="f",
 															 Sprache_Folien = "f",
 															 Sprache_Vortrag = "f",
-															 Sprache_Moderation = "f"
+															 Sprache_Moderation = "f",
+															 Dauer_plan_min = "i",
+															 Dauer_real_min = "i"
 															 )
 	)
 
 
 dflang <- dat %>%
 	mutate(
-				 sprache_vortrag_folien_identisch = ifelse(as.character(Sprache_Folien) == as.character(Sprache_Vortrag), TRUE, FALSE)
+				 sprache_vortrag_folien_identisch = ifelse(as.character(Sprache_Folien) == as.character(Sprache_Vortrag), TRUE, FALSE),
+				 dauer_delta = Dauer_real_min - Dauer_plan_min
 				 )
+
+####################
+# kurze Vorab-Auswertung: Minuten pro Sprache, Delta gg. Plan etc.
+####################
+
+dfs <- dflang %>%
+				group_by(Sprache_Vortrag) %>%
+				summarise(
+									dauer_gesamt = sum(Dauer_real_min),
+								  dauer_plan = sum(Dauer_plan_min),
+									anz = n()) %>%
+				mutate(
+							 delta_abs_min = dauer_gesamt - dauer_plan,
+							 delta_relativ = dauer_gesamt / dauer_plan
+							 )
+
 
 ##############################
 
