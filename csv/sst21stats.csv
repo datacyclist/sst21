@@ -1,4 +1,4 @@
-ID	Tag	Raum	Vortragstyp	Sprache_Titel	Sprache_Folien	Sprache_Vortrag	Sprache_Moderation	Laenge_geplant_min	Laenge_real_min
+ID	Tag	Raum	Vortragstyp	Sprache_Titel	Sprache_Folien	Sprache_Vortrag	Sprache_Moderation	Dauer_plan_min	Dauer_real_min
 WS2_1	1	A	Workshop	FR	FR	FR	DE_FR	15	14
 WS2_2	1	A	Workshop	DE	DE	DE	DE_FR	15	15
 WS2_3	1	A	Workshop	DE	DE	DE_FR	DE_FR	15	15
