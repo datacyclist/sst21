@@ -15,7 +15,7 @@ Sprachstatistik der Schweizer Statistiktage 2021
 - Die Keynote von Alain Berset zählt auch als DE_FR
 
 ## Wie häufig wurde welche Sprache verwendet (relativ)?
-![](<figs/20210909_sprache-vortrag-relativ.png>)
+![](<figs/20210923_sprache-vortrag-relativ.png>)
 
 ## Wie lange wurde welche Sprache verwendet?
 ![](<figs/20210923_sprache-vortrag-dauer-summe.png>)

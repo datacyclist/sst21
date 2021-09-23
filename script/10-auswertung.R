@@ -141,20 +141,22 @@ dflang2 <- dflang %>%
 
 p2 <- ggplot(dflang2) +
 	geom_col(aes(x="Sprache", y=relanz_prozent, 
-							 group=Sprache_Vortrag, fill=Sprache_Vortrag), position="stack") +
+							 group=Sprache_Vortrag, fill=Sprache_Vortrag), 
+					 		colour = "black", position="stack") +
 	geom_text(aes(x="Sprache", y=relanz_prozent, label=relanz_prozent, group=Sprache_Vortrag), 
 						cex=8, position=position_stack(vjust=0.5)) +
 	scale_fill_brewer(palette="Set2") +
 	coord_flip() +
 	theme_sst21() +
 	theme(axis.text.y=element_text(angle=90, hjust=0.5)) +
-	labs(title="Schweizer Statistiktage 2021, gesprochene Sprachen der Vorträge in %",
-	     y = 'Anteil der Sprache in Prozent',
+	labs(title="SST 2021: gesprochene Sprachen der Vorträge in %",
+	     #y = 'Anteil der Sprache in Prozent',
+	     y = '',
 			 x = ''
 			 )
 
 png(filename=paste(figdirprefix, filedateprefix, "_sprache-vortrag-relativ.png", sep=''),
-		width=1400, height=250)
+		width=900, height=200)
  print(p2)
 dev.off()
 
