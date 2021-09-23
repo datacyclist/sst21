@@ -24,6 +24,6 @@ Sprachstatistik der Schweizer Statistiktage 2021
 ![](<figs/20210923_sprache-vortrag-identisch.png>)
 
 ## Wieviel wurde bei welcher Sprache zeitlich prozentual überzogen?
-![](<20210923_sprache-vortrag-delta-prozent.png>)
+![](<figs/20210923_sprache-vortrag-delta-prozent.png>)
 
 - nicht ganz ernst gemeint
