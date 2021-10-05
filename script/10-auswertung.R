@@ -192,4 +192,50 @@ png(filename=paste(figdirprefix, filedateprefix, "_sprache-vortrag-identisch.png
  print(p3)
 dev.off()
 
+###############################
+# Korrelationskoeffizienten zwischen Anzahl Autoren und Vortragsdauer
+###############################
 
+dfcor <- dflang %>%
+				filter(!(Sprache_Vortrag %in% ("IT"))) %>%
+				group_by(Sprache_Vortrag) %>%
+				summarise(cor_autoren_dauer = cor(Autoren,Dauer_real_min))
+
+p4 <- ggplot(dfcor) +
+	geom_col(aes(x=Sprache_Vortrag, y=cor_autoren_dauer, fill=Sprache_Vortrag), color="black", position="stack") +
+	scale_fill_brewer(palette="Set2", direction=1, guide=guide_legend(reverse=TRUE)) +
+	coord_flip() +
+	theme_sst21() +
+	theme(
+				axis.text.y=element_text(angle=0, hjust=0.5)) +
+	labs(title="SST 2021: Korrelation zw. Anzahl Autoren und Dauer?",
+	     x = '',
+			 y = 'Korrelationskoeffizient'
+			 )
+
+png(filename=paste(figdirprefix, filedateprefix, "_korrelation-vortragssprache-dauer.png", sep=''),
+		width=900, height=200)
+ print(p4)
+dev.off()
+
+########
+# Vorhersagemodell bauen
+########
+#
+# Predictors: Autorenanzahl, Vortragstyp, Sprache von Titel und Folien
+#
+# Target: Vortragssprache
+#
+########
+
+data_train <- dflang %>% filter(Tag %in% c(1,2))
+data_test <- dflang %>% filter(Tag %in% c(3) )
+
+formula <- Sprache_Vortrag ~ Autoren + Vortragstyp + Sprache_Titel + Sprache_Folien
+logit <- glm(formula, data = data_train, family = 'binomial')
+summary(logit)
+
+predict <- predict(logit, data_test, type = 'response')
+# confusion matrix
+table_mat <- table(data_test$Sprache_Vortrag, predict > 0.5)
+print(table_mat)
